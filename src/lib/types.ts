@@ -1,5 +1,5 @@
 import { TaskValues } from './validation';
-import { Task } from '@/generated/prisma/client';
+import { Task } from '@prisma/client';
 
 export interface TaskFormProps {
 	taskData: TaskValues;
