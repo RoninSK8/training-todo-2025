@@ -6,7 +6,7 @@ import { auth } from '@clerk/nextjs/server';
 import Task from './Task';
 import { TaskServerData } from '@/lib/types';
 
-export async function TasksPage() {
+export default async function TasksPage() {
 	const { userId } = await auth();
 	if (!userId) return null;
 	const tasks: TaskServerData[] = await prisma.task.findMany({
@@ -34,5 +34,3 @@ export async function TasksPage() {
 		</div>
 	);
 }
-
-export default TasksPage;
