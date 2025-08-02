@@ -5,7 +5,6 @@ import prisma from '@/lib/prisma';
 import { auth } from '@clerk/nextjs/server';
 import Task from './Task';
 import { TaskServerData } from '@/lib/types';
-import { addTask } from '../actions';
 
 export async function TasksPage() {
 	const { userId } = await auth();

@@ -1,7 +1,7 @@
 'use server';
 
 import prisma from '@/lib/prisma';
-import { TaskValues } from '@/lib/validation';
+
 import { auth } from '@clerk/nextjs/server';
 
 import { revalidatePath } from 'next/cache';
